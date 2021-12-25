@@ -1,0 +1,22 @@
+:root {
+  --bgcolor: hsl(217, 54%, 11%);
+  --cardbgcolor: hsl(216, 50%, 16%);
+  --cardlinecolor: hsl(215, 32%, 27%);
+  --white: hsl(0, 0%, 100%);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+body {
+  background-color: var(--bgcolor);
+}
