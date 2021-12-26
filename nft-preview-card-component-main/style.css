@@ -1,8 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
 :root {
   --bgcolor: hsl(217, 54%, 11%);
   --cardbgcolor: hsl(216, 50%, 16%);
   --cardlinecolor: hsl(215, 32%, 27%);
+  --cardshadow: #0c1729;
+  --card2ndshadow: #0c192c;
+  --softblue: hsl(215, 51%, 70%);
   --white: hsl(0, 0%, 100%);
+  --cyan: hsl(178, 100%, 50%);
+  --mfont: "Outfit";
 }
 * {
   margin: 0;
@@ -12,6 +19,7 @@
 .attribution {
   font-size: 11px;
   text-align: center;
+  margin-top: 2em;
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
@@ -19,4 +27,127 @@
 
 body {
   background-color: var(--bgcolor);
+}
+.cardcontainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.cardcontent {
+  background-color: var(--cardbgcolor);
+  border-radius: 15px;
+  padding-top: 1.5em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  width: 85%;
+  height: 80vh;
+  box-shadow: 0px 10px 0px 10px var(--cardshadow),
+    0px 10px 0px 20px var(--card2ndshadow);
+}
+.cardtext {
+  margin-left: 1.2em;
+  margin-right: 1.2em;
+  margin-top: 1em;
+  display: flex;
+  flex-direction: column;
+  height: 50%;
+}
+.desc {
+  margin-top: 0.5em;
+}
+.desc h1 {
+  font-family: var(--mfont);
+  font-weight: 600;
+  font-size: 1.3rem;
+  color: var(--white);
+}
+.desc p {
+  font-family: var(--mfont);
+  font-weight: 300;
+  color: var(--softblue);
+  line-height: 1.7em;
+  margin-top: 0.8em;
+  color: var(--softblue);
+}
+.nftimage {
+  border-radius: 15px;
+  width: 90%;
+  height: 100;
+  overflow: hidden;
+}
+.nftimage img {
+  width: 100%;
+}
+.valuedaysleft {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px var(--cardlinecolor) solid;
+  flex-grow: 1;
+}
+.value {
+  display: flex;
+  align-items: center;
+}
+.value p {
+  font-family: var(--mfont);
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: var(--cyan);
+}
+.value img {
+  width: 12px;
+  height: 20px;
+  margin-right: 0.5em;
+}
+.daysleft {
+  display: flex;
+  align-items: center;
+}
+.daysleft p {
+  font-family: var(--mfont);
+  font-weight: 300;
+  font-size: 0.9rem;
+  color: var(--softblue);
+}
+.daysleft img {
+  width: 20px;
+  height: 20px;
+  margin-right: 0.5em;
+}
+.creator {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+}
+.creator h1 {
+  font-family: var(--mfont);
+  font-size: 0.9rem;
+  font-weight: 300;
+  margin-left: 1em;
+  color: white;
+}
+.creator img {
+  width: 13%;
+  border: 1px white solid;
+  border-radius: 100px;
+}
+
+@media (min-width: 1440px) {
+  .cardcontent {
+    width: 20em;
+    height: 35em;
+  }
+}
+@media (min-width: 375px) {
+  .cardcontent {
+    width: 20em;
+    height: 35em;
+  }
 }
