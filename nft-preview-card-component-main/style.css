@@ -19,6 +19,7 @@
 .attribution {
   font-size: 11px;
   text-align: center;
+  margin-top: 2em;
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
@@ -31,6 +32,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   height: 100vh;
 }
 
@@ -143,7 +145,7 @@ body {
     height: 35em;
   }
 }
-@media (max-width: 1440px) {
+@media (min-width: 375px) {
   .cardcontent {
     width: 20em;
     height: 35em;
