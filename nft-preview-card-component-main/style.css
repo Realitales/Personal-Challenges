@@ -4,6 +4,8 @@
   --bgcolor: hsl(217, 54%, 11%);
   --cardbgcolor: hsl(216, 50%, 16%);
   --cardlinecolor: hsl(215, 32%, 27%);
+  --cardshadow: #0c1729;
+  --card2ndshadow: #0c192c;
   --softblue: hsl(215, 51%, 70%);
   --white: hsl(0, 0%, 100%);
   --cyan: hsl(178, 100%, 50%);
@@ -44,6 +46,8 @@ body {
   flex-direction: column;
   width: 85%;
   height: 80vh;
+  box-shadow: 0px 10px 0px 10px var(--cardshadow),
+    0px 10px 0px 20px var(--card2ndshadow);
 }
 .cardtext {
   margin-left: 1.2em;
@@ -131,4 +135,17 @@ body {
   width: 13%;
   border: 1px white solid;
   border-radius: 100px;
+}
+
+@media (min-width: 1440px) {
+  .cardcontent {
+    width: 20em;
+    height: 35em;
+  }
+}
+@media (max-width: 1440px) {
+  .cardcontent {
+    width: 20em;
+    height: 35em;
+  }
 }
